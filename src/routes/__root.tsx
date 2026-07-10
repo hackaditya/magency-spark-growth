@@ -136,6 +136,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <Header />
       <Outlet />
+      <Footer />
     </QueryClientProvider>
   );
 }
