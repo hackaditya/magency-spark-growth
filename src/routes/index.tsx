@@ -8,6 +8,8 @@ import {
   CheckCircle2,
   Calendar,
   MessageCircle,
+  Target,
+  Video,
 } from "lucide-react";
 
 import heroStudio from "../assets/hero-studio.jpg";
@@ -40,11 +42,27 @@ export const Route = createFileRoute("/")({
 const services = [
   {
     icon: Megaphone,
-    title: "Influencer Collabs",
+    title: "Influencer Marketing",
     description:
-      "We connect you with local micro-influencers who actually move the needle for community-based brands.",
-    features: ["Campaign Sourcing", "Content Management", "Performance Tracking"],
+      "We build end-to-end influencer marketing campaigns with creators whose audience matches your buyer — from sourcing to content to ROI tracking.",
+    features: ["Creator Sourcing", "Campaign Management", "ROI Tracking"],
     color: "bg-brand-light text-brand",
+  },
+  {
+    icon: Target,
+    title: "Meta Ads Management",
+    description:
+      "We run and optimize your Meta ads across Facebook, Instagram, and WhatsApp — set your budget and we'll turn your videos into scroll-stopping ads that drive real visibility.",
+    features: ["Budget-Based Ad Setup", "Creative & Copy", "Daily Optimization"],
+    color: "bg-sky-100 text-sky-600",
+  },
+  {
+    icon: Video,
+    title: "Video Production",
+    description:
+      "Short-form reels and long-form storytelling videos crafted for small and medium businesses — built to convert on social feeds and ad placements.",
+    features: ["Short-Form Reels", "Long-Form Videos", "Ad-Ready Edits"],
+    color: "bg-orange-100 text-orange-600",
   },
   {
     icon: Search,
