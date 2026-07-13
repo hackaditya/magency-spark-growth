@@ -7,6 +7,8 @@ import {
   Share2,
   CheckCircle2,
   ArrowRight,
+  Target,
+  Video,
 } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
@@ -32,16 +34,42 @@ export const Route = createFileRoute("/services")({
 const services = [
   {
     icon: Megaphone,
-    title: "Influencer Collaborations",
+    title: "Influencer Marketing",
     description:
-      "We partner your brand with local micro-influencers who already speak to your ideal customers. Authentic endorsements that drive real foot traffic and online buzz.",
+      "Full-funnel influencer marketing — we match your brand with creators whose audience actually converts, then handle briefs, content, and reporting end-to-end.",
     features: [
-      "Micro-influencer sourcing",
-      "Campaign brief creation",
+      "Creator sourcing & vetting",
+      "Campaign brief & negotiation",
       "Content rights management",
-      "Performance analytics",
+      "ROI & performance analytics",
     ],
     color: "bg-brand-light text-brand",
+  },
+  {
+    icon: Target,
+    title: "Meta Ads Management",
+    description:
+      "We manage your Meta ads across Facebook, Instagram, and WhatsApp. Tell us your budget and we'll turn your videos into high-performing ads that put your business in front of the right people.",
+    features: [
+      "Budget-based ad planning",
+      "Video ad creative & copy",
+      "Audience targeting & retargeting",
+      "Daily optimization & reporting",
+    ],
+    color: "bg-sky-100 text-sky-600",
+  },
+  {
+    icon: Video,
+    title: "Video Production",
+    description:
+      "Short-form reels and long-form storytelling videos made specifically for small and medium business owners — designed to perform on organic feeds and paid Meta ads.",
+    features: [
+      "Short-form reels & shorts",
+      "Long-form brand videos",
+      "Scripting & storyboarding",
+      "Ad-ready edits & formats",
+    ],
+    color: "bg-orange-100 text-orange-600",
   },
   {
     icon: Search,
