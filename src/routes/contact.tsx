@@ -31,13 +31,13 @@ const contactDetails = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 98765 43210",
-    href: "tel:+919876543210",
+    value: "+91 96606 90765",
+    href: "tel:+919660690765",
   },
   {
     icon: MapPin,
     label: "Office",
-    value: "Bangalore, India",
+    value: "Patna, Bihar",
     href: "#",
   },
   {
