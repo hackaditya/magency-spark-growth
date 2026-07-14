@@ -148,10 +148,10 @@ function ContactPage() {
                       <detail.icon className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                         {detail.label}
                       </p>
-                      <p className="font-medium text-foreground">{detail.value}</p>
+                      <p className="text-lg font-bold text-foreground">{detail.value}</p>
                     </div>
                   </a>
                 ))}
