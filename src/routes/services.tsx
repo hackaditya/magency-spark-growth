@@ -18,15 +18,17 @@ export const Route = createFileRoute("/services")({
       {
         name: "description",
         content:
-          "Explore Magency.in services: influencer collaborations, SEO, GMB optimization, website making, and social media handling for small businesses.",
+          "Explore Magency.in services: influencer marketing, Meta ads, video production, SEO, GMB optimization, website making, and social media handling for small businesses.",
       },
       { property: "og:title", content: "Services — Magency.in" },
       {
         property: "og:description",
         content:
-          "Explore Magency.in services: influencer collaborations, SEO, GMB optimization, website making, and social media handling for small businesses.",
+          "Explore Magency.in services: influencer marketing, Meta ads, video production, SEO, GMB optimization, website making, and social media handling for small businesses.",
       },
+      { property: "og:url", content: "https://magency.in/services" },
     ],
+    links: [{ rel: "canonical", href: "https://magency.in/services" }],
   }),
   component: ServicesPage,
 });

@@ -10,6 +10,9 @@ import {
   MessageCircle,
   Target,
   Video,
+  Handshake,
+  Wallet,
+  FileBarChart,
 } from "lucide-react";
 
 import heroStudio from "../assets/hero-studio.jpg";
@@ -22,22 +25,24 @@ import { Instagram, TrendingUp, ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Magency.in — Digital Marketing for Small Businesses" },
+      { title: "Magency.in — Digital Marketing & Social Media Agency in Patna" },
       {
         name: "description",
         content:
-          "Full-stack marketing for small businesses: influencer collaborations, SEO, GMB optimization, website design, and social media handling.",
+          "Magency.in is a Patna digital marketing agency helping small & medium businesses grow with influencer marketing, Meta ads, video production, SEO, GMB, websites & social media management.",
       },
       {
         property: "og:title",
-        content: "Magency.in — Digital Marketing for Small Businesses",
+        content: "Magency.in — Digital Marketing & Social Media Agency in Patna",
       },
       {
         property: "og:description",
         content:
-          "Full-stack marketing for small businesses: influencer collaborations, SEO, GMB optimization, website design, and social media handling.",
+          "Patna digital marketing agency for small & medium businesses — influencer marketing, Meta ads, video, SEO, GMB, websites & social media.",
       },
+      { property: "og:url", content: "https://magency.in" },
     ],
+    links: [{ rel: "canonical", href: "https://magency.in" }],
   }),
   component: Index,
 });
@@ -98,6 +103,50 @@ const services = [
       "Daily content, community management, and growth strategy across Instagram, Facebook, and more.",
     features: ["Content Calendars", "Community Replies", "Paid Ads"],
     color: "bg-rose-100 text-rose-600",
+  },
+];
+
+const whyMagency = [
+  {
+    icon: Handshake,
+    title: "You make, we market",
+    description:
+      "You focus on the product. We own the digital hustle — content, ads, social, and local visibility.",
+  },
+  {
+    icon: MapPin,
+    title: "Local-first",
+    description:
+      "We know Patna. Our campaigns are tuned to local audiences, search behavior, and delivery zones.",
+  },
+  {
+    icon: FileBarChart,
+    title: "Transparent reporting",
+    description:
+      "Monthly reports on reach, orders, and visibility. No black boxes — just clear numbers and next steps.",
+  },
+  {
+    icon: Wallet,
+    title: "Small-business budgets",
+    description:
+      "Agency-grade work priced for small and medium businesses. Flexible packages, no lock-in.",
+  },
+];
+
+const testimonials = [
+  {
+    quote:
+      "Magency took over our social and local search and our orders kept climbing every month. We finally had the space to focus on baking.",
+    name: "Cakeloo",
+    role: "Patna bakery — @cakeloo_official",
+    initial: "C",
+  },
+  {
+    quote:
+      "They turned our reels into real footfall. The monthly reports showed exactly what was working and what to fix next.",
+    name: "Patna Café Owner",
+    role: "F&B, Patna",
+    initial: "P",
   },
 ];
 
@@ -339,6 +388,63 @@ function Index() {
                 Read the case study <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Magency */}
+      <section className="py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-16 max-w-2xl">
+            <h2 className="mb-4 font-display text-4xl font-bold tracking-tight text-foreground">
+              Why local brands choose Magency.in
+            </h2>
+            <p className="text-muted-foreground">
+              You make great products. We make sure Patna knows about them. Here's what sets us apart.
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {whyMagency.map((item) => (
+              <div key={item.title} className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-light text-brand">
+                  <item.icon className="h-6 w-6" />
+                </div>
+                <h3 className="mb-2 font-display text-lg font-bold">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="bg-bg-light py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 font-display text-4xl font-bold tracking-tight text-foreground">
+              What our partners say
+            </h2>
+            <p className="mx-auto max-w-xl text-muted-foreground">
+              Results we're proud of — and the people behind them.
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2">
+            {testimonials.map((t) => (
+              <figure key={t.name} className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+                <blockquote className="mb-6 text-lg leading-relaxed text-foreground">
+                  &ldquo;{t.quote}&rdquo;
+                </blockquote>
+                <figcaption className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-light font-display text-lg font-bold text-brand">
+                    {t.initial}
+                  </div>
+                  <div>
+                    <div className="font-bold text-foreground">{t.name}</div>
+                    <div className="text-sm text-muted-foreground">{t.role}</div>
+                  </div>
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>

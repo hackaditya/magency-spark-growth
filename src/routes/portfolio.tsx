@@ -30,7 +30,9 @@ export const Route = createFileRoute("/portfolio")({
         content:
           "See how Magency.in helped Cakeloo, a Patna bakery, grow visibility and sales month over month with content, social media, and local marketing.",
       },
+      { property: "og:url", content: "https://magency.in/portfolio" },
     ],
+    links: [{ rel: "canonical", href: "https://magency.in/portfolio" }],
   }),
   component: PortfolioPage,
 });
