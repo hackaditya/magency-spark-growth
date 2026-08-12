@@ -39,7 +39,7 @@ export function Footer() {
               <Instagram className="h-5 w-5" />
             </a>
             <a
-              href="https://wa.me/919660690765"
+              href="https://wa.me/919199990766"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Message Magency.in on WhatsApp"
@@ -48,7 +48,7 @@ export function Footer() {
               <MessageCircle className="h-5 w-5" />
             </a>
             <a
-              href="mailto:hello@magency.in"
+              href="mailto:teammagency19@gmail.com"
               aria-label="Email Magency.in"
               className="text-muted-foreground transition-colors hover:text-foreground"
             >

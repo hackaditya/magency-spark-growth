@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const WHATSAPP_NUMBER = "919660690765";
+const WHATSAPP_NUMBER = "919199990766";
 const DEFAULT_MESSAGE =
   "Hi Magency.in! I'd like to know more about your marketing services for my business.";
 
