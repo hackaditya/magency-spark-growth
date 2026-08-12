@@ -266,6 +266,83 @@ function Index() {
         </div>
       </section>
 
+      {/* Portfolio / Case Study Section */}
+      <section className="bg-bg-light py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-16 text-center">
+            <div className="mb-6 inline-flex items-center rounded-full bg-brand-light px-3 py-1 text-xs font-bold tracking-widest text-brand uppercase">
+              Featured Work
+            </div>
+            <h2 className="mb-4 font-display text-4xl font-bold tracking-tight text-foreground">
+              Real growth for real businesses
+            </h2>
+            <p className="mx-auto max-w-xl text-muted-foreground">
+              We helped Cakeloo, a Patna bakery, turn great cakes into city-wide demand.
+            </p>
+          </div>
+
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl bg-muted shadow-sm">
+                <img
+                  src={cakelooCake}
+                  alt="Chocolate ganache cake created for Cakeloo, Patna"
+                  width={600}
+                  height={750}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="mt-8 aspect-[4/5] w-full overflow-hidden rounded-2xl bg-muted shadow-sm">
+                <img
+                  src={cakelooFloral}
+                  alt="Floral birthday cake created for Cakeloo, Patna"
+                  width={600}
+                  height={750}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div>
+              <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-foreground px-3 py-1 text-xs font-bold tracking-widest text-background uppercase">
+                <Instagram className="h-3 w-3" /> @cakeloo_official
+              </span>
+              <h3 className="mb-6 font-display text-3xl font-bold tracking-tight text-foreground">
+                Cakeloo — Patna's go-to cake shop
+              </h3>
+              <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
+                We took over Cakeloo's digital side — content, social, and local visibility — so the
+                founders could focus on the product. The result: steady, month-over-month growth in
+                reach and orders.
+              </p>
+              <div className="mb-10 grid grid-cols-3 gap-6">
+                <div>
+                  <div className="flex items-center gap-1 font-display text-2xl font-extrabold text-brand">
+                    <TrendingUp className="h-5 w-5" /> +312%
+                  </div>
+                  <p className="text-sm text-muted-foreground">Reach growth</p>
+                </div>
+                <div>
+                  <div className="font-display text-2xl font-extrabold text-brand">+184%</div>
+                  <p className="text-sm text-muted-foreground">Order volume</p>
+                </div>
+                <div>
+                  <div className="font-display text-2xl font-extrabold text-brand">Top 3</div>
+                  <p className="text-sm text-muted-foreground">Patna search</p>
+                </div>
+              </div>
+              <Link
+                to="/portfolio"
+                className="inline-flex items-center gap-2 rounded-full bg-foreground px-8 py-3 font-bold text-background transition-colors hover:bg-foreground/90"
+              >
+                Read the case study <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Footer */}
       <section className="bg-foreground py-20 text-background">
         <div className="mx-auto max-w-7xl px-6 text-center">
