@@ -219,5 +219,3 @@ function PortfolioPage() {
     </main>
   );
 }
-
-export { TrendingUp };
