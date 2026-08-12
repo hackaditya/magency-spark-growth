@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { useState } from "react";
+import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
+
+const WHATSAPP_NUMBER = "919660690765";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -8,15 +11,17 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Get in touch with Magency.in. Book a free marketing audit for your small business.",
+          "Get in touch with Magency.in. Book a free marketing audit for your small business in Patna.",
       },
       { property: "og:title", content: "Contact — Magency.in" },
       {
         property: "og:description",
         content:
-          "Get in touch with Magency.in. Book a free marketing audit for your small business.",
+          "Get in touch with Magency.in. Book a free marketing audit for your small business in Patna.",
       },
+      { property: "og:url", content: "https://magency.in/contact" },
     ],
+    links: [{ rel: "canonical", href: "https://magency.in/contact" }],
   }),
   component: ContactPage,
 });
@@ -49,6 +54,23 @@ const contactDetails = [
 ];
 
 function ContactPage() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [service, setService] = useState("General inquiry");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const text =
+      `Hi Magency.in! I'd like to book a free audit.\n\n` +
+      `Name: ${name || "—"}\n` +
+      `Email: ${email || "—"}\n` +
+      `Service: ${service}\n` +
+      `Message: ${message || "—"}`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <main className="min-h-screen bg-background font-sans text-foreground">
       <section className="bg-bg-light py-24">
@@ -69,39 +91,49 @@ function ContactPage() {
             {/* Contact Form */}
             <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
               <h2 className="mb-6 font-display text-2xl font-bold">Send us a message</h2>
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-5" onSubmit={handleSubmit}>
                 <div>
-                  <label htmlFor="name" className="mb-2 block text-sm font-medium text-foreground">
+                  <label htmlFor="name" className="mb-2 block text-sm font-bold text-foreground">
                     Name
                   </label>
                   <input
                     id="name"
                     type="text"
+                    required
                     placeholder="Your name"
-                    className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground outline-none ring-offset-background transition-all focus-visible:ring-2 focus-visible:ring-ring"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-bold text-foreground outline-none ring-offset-background transition-all focus-visible:ring-2 focus-visible:ring-ring"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="mb-2 block text-sm font-medium text-foreground">
+                  <label htmlFor="email" className="mb-2 block text-sm font-bold text-foreground">
                     Email
                   </label>
                   <input
                     id="email"
                     type="email"
+                    required
                     placeholder="you@business.com"
-                    className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground outline-none ring-offset-background transition-all focus-visible:ring-2 focus-visible:ring-ring"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-bold text-foreground outline-none ring-offset-background transition-all focus-visible:ring-2 focus-visible:ring-ring"
                   />
                 </div>
                 <div>
-                  <label htmlFor="service" className="mb-2 block text-sm font-medium text-foreground">
+                  <label htmlFor="service" className="mb-2 block text-sm font-bold text-foreground">
                     Service you're interested in
                   </label>
                   <select
                     id="service"
-                    className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground outline-none ring-offset-background transition-all focus-visible:ring-2 focus-visible:ring-ring"
+                    value={service}
+                    onChange={(e) => setService(e.target.value)}
+                    className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-bold text-foreground outline-none ring-offset-background transition-all focus-visible:ring-2 focus-visible:ring-ring"
                   >
                     <option>General inquiry</option>
-                    <option>Influencer Collaborations</option>
+                    <option>Influencer Marketing</option>
+                    <option>Meta Ads Management</option>
+                    <option>Video Production</option>
                     <option>SEO Strategy</option>
                     <option>GMB Optimization</option>
                     <option>Website Making</option>
@@ -109,21 +141,24 @@ function ContactPage() {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="message" className="mb-2 block text-sm font-medium text-foreground">
+                  <label htmlFor="message" className="mb-2 block text-sm font-bold text-foreground">
                     Message
                   </label>
                   <textarea
                     id="message"
                     rows={4}
                     placeholder="Tell us about your business and goals..."
-                    className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground outline-none ring-offset-background transition-all focus-visible:ring-2 focus-visible:ring-ring"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-bold text-foreground outline-none ring-offset-background transition-all focus-visible:ring-2 focus-visible:ring-ring"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-brand px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:bg-brand-dark"
+                  className="flex w-full items-center justify-center gap-2 rounded-lg bg-brand px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:bg-brand-dark"
                 >
-                  Book My Free Audit
+                  <MessageCircle className="h-4 w-4" />
+                  Book My Free Audit on WhatsApp
                 </button>
               </form>
             </div>
@@ -132,7 +167,7 @@ function ContactPage() {
             <div className="space-y-8">
               <div>
                 <h2 className="mb-4 font-display text-2xl font-bold">Contact details</h2>
-                <p className="text-muted-foreground">
+                <p className="font-bold text-muted-foreground">
                   Prefer to reach out directly? Here's how you can find us.
                 </p>
               </div>
@@ -156,6 +191,16 @@ function ContactPage() {
                   </a>
                 ))}
               </div>
+
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 rounded-xl bg-foreground px-6 py-4 text-sm font-bold text-background transition-colors hover:bg-foreground/90"
+              >
+                <MessageCircle className="h-5 w-5" />
+                Chat with us on WhatsApp
+              </a>
             </div>
           </div>
         </div>
