@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 
-const WHATSAPP_NUMBER = "919660690765";
+const WHATSAPP_NUMBER = "919199990766";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -30,14 +30,14 @@ const contactDetails = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@magency.in",
-    href: "mailto:hello@magency.in",
+    value: "teammagency19@gmail.com",
+    href: "mailto:teammagency19@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 96606 90765",
-    href: "tel:+919660690765",
+    value: "+91 91999 90766",
+    href: "tel:+919199990766",
   },
   {
     icon: MapPin,
