@@ -33,6 +33,27 @@ export const Route = createFileRoute("/portfolio")({
       { property: "og:url", content: "https://magency-spark-growth.lovable.app/portfolio" },
     ],
     links: [{ rel: "canonical", href: "https://magency-spark-growth.lovable.app/portfolio" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Our Work — Magency.in",
+          description:
+            "Case studies from Magency.in, including the Cakeloo bakery growth project in Patna.",
+          url: "https://magency-spark-growth.lovable.app/portfolio",
+          hasPart: [
+            {
+              "@type": "CreativeWork",
+              name: "Cakeloo — Patna bakery growth case study",
+              about: "Social media, content and local marketing for a Patna bakery",
+            },
+          ],
+        }),
+      },
+    ],
+
   }),
   component: PortfolioPage,
 });
