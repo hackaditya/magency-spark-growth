@@ -1,15 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  Megaphone,
-  Search,
-  MapPin,
-  Globe,
-  Share2,
-  CheckCircle2,
-  ArrowRight,
-  Target,
-  Video,
-} from "lucide-react";
+import { Megaphone, Search, MapPin, Globe, Share2, CheckCircle2, Target, Video } from "lucide-react";
+import { ServiceInquiryForm } from "../components/ServiceInquiryForm";
+
 
 export const Route = createFileRoute("/services")({
   head: () => ({
