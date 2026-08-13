@@ -25,25 +25,49 @@ import { Instagram, TrendingUp, ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Magency.in — Digital Marketing & Social Media Agency in Patna" },
+      { title: "Digital Marketing Agency in Patna | Magency.in" },
       {
         name: "description",
         content:
-          "Magency.in is a Patna digital marketing agency helping small & medium businesses grow with influencer marketing, Meta ads, video production, SEO, GMB, websites & social media management.",
+          "Patna digital marketing agency for small businesses: influencer marketing, Meta ads, video, SEO, GMB and social media management.",
       },
       {
         property: "og:title",
-        content: "Magency.in — Digital Marketing & Social Media Agency in Patna",
+        content: "Digital Marketing Agency in Patna | Magency.in",
       },
       {
         property: "og:description",
         content:
-          "Patna digital marketing agency for small & medium businesses — influencer marketing, Meta ads, video, SEO, GMB, websites & social media.",
+          "Grow your Patna business with influencer marketing, Meta ads, video, SEO, GMB and social media handled end-to-end.",
       },
-      { property: "og:url", content: "https://magency.in" },
+      { property: "og:url", content: "https://magency-spark-growth.lovable.app/" },
     ],
-    links: [{ rel: "canonical", href: "https://magency.in" }],
+    links: [{ rel: "canonical", href: "https://magency-spark-growth.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "Magency.in",
+          description:
+            "Digital marketing agency in Patna for small and medium businesses.",
+          url: "https://magency-spark-growth.lovable.app/",
+          telephone: "+91-91999-90766",
+          email: "teammagency19@gmail.com",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Patna",
+            addressRegion: "Bihar",
+            addressCountry: "IN",
+          },
+          areaServed: "Patna, Bihar",
+          sameAs: ["https://instagram.com/magency.in"],
+        }),
+      },
+    ],
   }),
+
   component: Index,
 });
 
