@@ -79,26 +79,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Magency.in — Digital Marketing & Social Media Agency in Patna" },
+      { title: "Magency.in — Digital Marketing Agency in Patna" },
       {
         name: "description",
         content:
-          "Magency.in is a Patna-based digital marketing agency helping small and medium businesses grow with influencer marketing, Meta ads, video production, SEO, GMB, websites, and social media management.",
+          "Magency.in helps Patna small businesses grow with influencer marketing, Meta ads, video, SEO, GMB and social media.",
       },
       { name: "author", content: "Magency.in" },
-      { property: "og:title", content: "Magency.in — Digital Marketing & Social Media Agency in Patna" },
-      {
-        property: "og:description",
-        content:
-          "Patna digital marketing agency for small and medium businesses — influencer marketing, Meta ads, video production, SEO, GMB, websites, and social media.",
-      },
+      { property: "og:site_name", content: "Magency.in" },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://magency.in" },
-      { property: "og:image", content: "https://magency.in/og-image.jpg" },
+      { property: "og:image", content: "https://magency-spark-growth.lovable.app/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@MagencyIn" },
-      { name: "twitter:image", content: "https://magency.in/og-image.jpg" },
+      { name: "twitter:image", content: "https://magency-spark-growth.lovable.app/og-image.jpg" },
     ],
+
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
