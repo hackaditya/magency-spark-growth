@@ -150,7 +150,7 @@ function ServicesPage() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="group rounded-2xl border border-border bg-card p-8 transition-all hover:-translate-y-2 hover:shadow-xl"
+                className="group flex flex-col rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-xl"
               >
                 <div
                   className={`mb-6 flex h-14 w-14 items-center justify-center rounded-xl ${service.color}`}
@@ -167,14 +167,12 @@ function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand transition-colors hover:text-brand-dark"
-                >
-                  Get started <ArrowRight className="h-4 w-4" />
-                </Link>
+                <div className="mt-auto">
+                  <ServiceInquiryForm service={service.title} />
+                </div>
               </div>
             ))}
+
           </div>
         </div>
       </section>
