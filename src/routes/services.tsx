@@ -18,9 +18,9 @@ export const Route = createFileRoute("/services")({
         content:
           "Explore Magency.in services: influencer marketing, Meta ads, video production, SEO, GMB optimization, website making, and social media handling for small businesses.",
       },
-      { property: "og:url", content: "https://magency.in/services" },
+      { property: "og:url", content: "https://magency-spark-growth.lovable.app/services" },
     ],
-    links: [{ rel: "canonical", href: "https://magency.in/services" }],
+    links: [{ rel: "canonical", href: "https://magency-spark-growth.lovable.app/services" }],
   }),
   component: ServicesPage,
 });

@@ -19,9 +19,9 @@ export const Route = createFileRoute("/contact")({
         content:
           "Get in touch with Magency.in. Book a free marketing audit for your small business in Patna.",
       },
-      { property: "og:url", content: "https://magency.in/contact" },
+      { property: "og:url", content: "https://magency-spark-growth.lovable.app/contact" },
     ],
-    links: [{ rel: "canonical", href: "https://magency.in/contact" }],
+    links: [{ rel: "canonical", href: "https://magency-spark-growth.lovable.app/contact" }],
   }),
   component: ContactPage,
 });

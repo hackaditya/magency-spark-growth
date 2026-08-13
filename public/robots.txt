@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://magency.in/sitemap.xml
+Sitemap: https://magency-spark-growth.lovable.app/sitemap.xml

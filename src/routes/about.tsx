@@ -16,9 +16,9 @@ export const Route = createFileRoute("/about")({
         content:
           "Learn about Magency.in, the marketing agency helping small businesses grow through influencer marketing, SEO, GMB, websites, and social media.",
       },
-      { property: "og:url", content: "https://magency.in/about" },
+      { property: "og:url", content: "https://magency-spark-growth.lovable.app/about" },
     ],
-    links: [{ rel: "canonical", href: "https://magency.in/about" }],
+    links: [{ rel: "canonical", href: "https://magency-spark-growth.lovable.app/about" }],
   }),
   component: AboutPage,
 });
