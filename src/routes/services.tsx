@@ -6,22 +6,56 @@ import { ServiceInquiryForm } from "../components/ServiceInquiryForm";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Magency.in" },
+      { title: "Marketing Services in Patna — Magency.in" },
       {
         name: "description",
         content:
-          "Explore Magency.in services: influencer marketing, Meta ads, video production, SEO, GMB optimization, website making, and social media handling for small businesses.",
+          "Influencer marketing, Meta ads, video production, SEO, GMB, website making and social media handling for small businesses in Patna.",
       },
-      { property: "og:title", content: "Services — Magency.in" },
+      { property: "og:title", content: "Marketing Services in Patna — Magency.in" },
       {
         property: "og:description",
         content:
-          "Explore Magency.in services: influencer marketing, Meta ads, video production, SEO, GMB optimization, website making, and social media handling for small businesses.",
+          "Influencer marketing, Meta ads, video, SEO, GMB, websites and social media handling for small and medium businesses.",
       },
       { property: "og:url", content: "https://magency-spark-growth.lovable.app/services" },
     ],
     links: [{ rel: "canonical", href: "https://magency-spark-growth.lovable.app/services" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Magency.in marketing services",
+          itemListElement: [
+            "Influencer Marketing",
+            "Meta Ads Management",
+            "Video Production",
+            "SEO Strategy",
+            "GMB Optimization",
+            "Website Making",
+            "Social Media Handling",
+          ].map((name, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            item: {
+              "@type": "Service",
+              name,
+              serviceType: name,
+              areaServed: "Patna, Bihar",
+              provider: {
+                "@type": "LocalBusiness",
+                name: "Magency.in",
+                url: "https://magency-spark-growth.lovable.app/",
+              },
+            },
+          })),
+        }),
+      },
+    ],
   }),
+
   component: ServicesPage,
 });
 
