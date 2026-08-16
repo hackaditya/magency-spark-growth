@@ -16,8 +16,7 @@ import {
 } from "lucide-react";
 
 import heroStudio from "../assets/hero-studio.jpg";
-import logoReveal from "../assets/magency-logo-reveal.mp4.asset.json";
-import logoPoster from "../assets/magency-logo-poster.jpg.asset.json";
+import magencyLogo from "../assets/magency-logo.jpg.asset.json";
 import clientCafe from "../assets/client-cafe.jpg";
 import clientCosmetics from "../assets/client-cosmetics.jpg";
 import cakelooCake from "../assets/portfolio/cakeloo-4.jpg";
