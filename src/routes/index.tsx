@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 import heroStudio from "../assets/hero-studio.jpg";
-import magencyLogo from "../assets/magency-logo.jpg.asset.json";
+
 import clientCafe from "../assets/client-cafe.jpg";
 import clientCosmetics from "../assets/client-cosmetics.jpg";
 import cakelooCake from "../assets/portfolio/cakeloo-4.jpg";
@@ -211,32 +211,45 @@ function Index() {
               </div>
             </div>
           </div>
-          <div className="mt-16 lg:mt-0 lg:w-1/2">
-            <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-2xl bg-card shadow-2xl">
+          <div className="mt-16 lg:mt-0 lg:w-1/2 lg:pl-12">
+            <div className="relative overflow-hidden rounded-3xl bg-muted shadow-2xl">
               <img
-                src={magencyLogo.url}
-                alt="Magency.in logo"
-                width={1080}
-                height={1080}
-                className="h-full w-full object-contain p-8"
+                src={heroStudio}
+                alt="Magency.in creative team collaborating in a modern studio in Patna"
+                width={1200}
+                height={1400}
+                className="aspect-[4/3] h-full w-full object-cover"
                 loading="eager"
               />
+              <div className="absolute inset-x-4 bottom-4 flex items-center justify-between rounded-2xl bg-card/90 px-5 py-4 shadow-lg backdrop-blur">
+                <div>
+                  <div className="font-display text-lg font-bold text-foreground">
+                    Patna&rsquo;s growth partner
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Content, ads &amp; local search — handled.
+                  </p>
+                </div>
+                <div className="hidden font-display text-2xl font-extrabold text-brand sm:block">
+                  +312%
+                </div>
+              </div>
             </div>
             <div className="mt-4 grid grid-cols-2 gap-4">
-              <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-muted shadow-sm">
-                <img
-                  src={heroStudio}
-                  alt="Magency.in creative team collaborating in a modern studio"
-                  width={1200}
-                  height={1400}
-                  className="h-full w-full object-cover"
-                  loading="eager"
-                />
-              </div>
-              <div className="mt-6 aspect-[4/5] overflow-hidden rounded-2xl bg-muted shadow-sm">
+              <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-muted shadow-sm">
                 <img
                   src={clientCafe}
                   alt="Local Patna cafe brand grown with Magency.in"
+                  width={800}
+                  height={1000}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-muted shadow-sm">
+                <img
+                  src={clientCosmetics}
+                  alt="Product photography for a Patna beauty brand"
                   width={800}
                   height={1000}
                   className="h-full w-full object-cover"
