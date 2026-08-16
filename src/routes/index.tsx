@@ -16,8 +16,7 @@ import {
 } from "lucide-react";
 
 import heroStudio from "../assets/hero-studio.jpg";
-import logoReveal from "../assets/magency-logo-reveal.mp4.asset.json";
-import logoPoster from "../assets/magency-logo-poster.jpg.asset.json";
+import magencyLogo from "../assets/magency-logo.jpg.asset.json";
 import clientCafe from "../assets/client-cafe.jpg";
 import clientCosmetics from "../assets/client-cosmetics.jpg";
 import cakelooCake from "../assets/portfolio/cakeloo-4.jpg";
@@ -213,17 +212,14 @@ function Index() {
             </div>
           </div>
           <div className="mt-16 lg:mt-0 lg:w-1/2">
-            <div className="relative overflow-hidden rounded-2xl bg-foreground shadow-2xl">
-              <video
-                src={logoReveal.url}
-                poster={logoPoster.url}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                aria-label="Magency.in logo animation"
-                className="aspect-video h-full w-full object-cover"
+            <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-2xl bg-card shadow-2xl">
+              <img
+                src={magencyLogo.url}
+                alt="Magency.in logo"
+                width={1080}
+                height={1080}
+                className="h-full w-full object-contain p-8"
+                loading="eager"
               />
             </div>
             <div className="mt-4 grid grid-cols-2 gap-4">
