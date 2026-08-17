@@ -179,82 +179,94 @@ function Index() {
   return (
     <main className="min-h-screen bg-background font-sans text-foreground">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:flex lg:items-center">
-          <div className="lg:w-1/2">
-            <div className="mb-6 inline-flex items-center rounded-full bg-brand-light px-3 py-1 text-xs font-bold tracking-widest text-brand uppercase">
-              Growth Engine for Local Brands
+      <section className="relative px-6 py-20 lg:py-28">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="space-y-8">
+            <div className="space-y-5">
+              <p className="text-sm font-semibold uppercase tracking-tight text-accent">
+                Growth Agency for Patna SMBs
+              </p>
+              <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-7xl">
+                Scale your business with <span className="text-accent">Magency</span> precision.
+              </h1>
+              <p className="max-w-lg text-xl leading-relaxed text-muted-foreground">
+                High-impact digital marketing strategies designed specifically for Patna&rsquo;s
+                emerging and established businesses.
+              </p>
             </div>
-            <h1 className="mb-8 font-display text-5xl font-extrabold leading-[1.1] tracking-tight text-foreground lg:text-7xl">
-              We turn small businesses into <span className="text-brand">local giants.</span>
-            </h1>
-            <p className="mb-10 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              Full-stack marketing for the next generation of small businesses. From influencer
-              buzz to SEO dominance, we handle the digital so you can handle the demand.
-            </p>
-            <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+
+            {/* Service Highlights — scannable */}
+            <div className="flex flex-wrap gap-2">
+              {[
+                "Influencer Marketing",
+                "Meta Ads",
+                "Video Production",
+                "SEO & GMB",
+                "Website Design",
+                "Social Media",
+              ].map((label) => (
+                <span
+                  key={label}
+                  className="rounded-full border border-border bg-card px-4 py-1.5 text-sm font-medium text-foreground"
+                >
+                  {label}
+                </span>
+              ))}
+            </div>
+
+            {/* Primary + Secondary CTA */}
+            <div className="flex flex-col items-start gap-5 pt-2 sm:flex-row sm:items-center sm:gap-6">
               <Link
                 to="/services"
-                className="rounded-lg bg-foreground px-8 py-4 text-center font-bold text-background transition-all hover:bg-foreground/90"
+                className="inline-flex w-full items-center justify-center rounded-full bg-accent px-8 py-4 text-lg font-semibold text-accent-foreground shadow-lg shadow-accent/20 transition-colors hover:bg-accent/90 sm:w-auto"
               >
                 View Services
               </Link>
-              <div className="flex items-center space-x-3 px-4 py-4">
-                <div className="flex -space-x-2">
-                  <div className="h-8 w-8 rounded-full bg-muted ring-2 ring-background" />
-                  <div className="h-8 w-8 rounded-full bg-muted-foreground ring-2 ring-background" />
-                  <div className="h-8 w-8 rounded-full bg-border ring-2 ring-background" />
-                </div>
-                <span className="text-sm font-medium text-muted-foreground">
-                  Trusted by 120+ local owners
-                </span>
-              </div>
+              <Link
+                to="/contact"
+                className="group inline-flex items-center gap-1 text-lg font-semibold text-accent transition-opacity hover:opacity-80"
+              >
+                Start Now
+                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
             </div>
+
+            <p className="text-sm italic text-muted-foreground">
+              Trusted by local businesses across Bihar
+            </p>
           </div>
-          <div className="mt-16 lg:mt-0 lg:w-1/2 lg:pl-12">
-            <div className="relative overflow-hidden rounded-3xl bg-muted shadow-2xl">
+
+          {/* Right Visual */}
+          <div className="relative">
+            <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-muted shadow-2xl">
               <img
                 src={heroStudio}
                 alt="Magency.in creative team collaborating in a modern studio in Patna"
                 width={1200}
-                height={1400}
-                className="aspect-[4/3] h-full w-full object-cover"
+                height={1500}
+                className="h-full w-full object-cover"
                 loading="eager"
               />
-              <div className="absolute inset-x-4 bottom-4 flex items-center justify-between rounded-2xl bg-card/90 px-5 py-4 shadow-lg backdrop-blur">
-                <div>
-                  <div className="font-display text-lg font-bold text-foreground">
-                    Patna&rsquo;s growth partner
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Content, ads &amp; local search — handled.
-                  </p>
-                </div>
-                <div className="hidden font-display text-2xl font-extrabold text-brand sm:block">
-                  +312%
-                </div>
-              </div>
             </div>
-            <div className="mt-4 grid grid-cols-2 gap-4">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-muted shadow-sm">
-                <img
-                  src={clientCafe}
-                  alt="Local Patna cafe brand grown with Magency.in"
-                  width={800}
-                  height={1000}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
+
+            {/* Stats Card Overlay */}
+            <div className="absolute -bottom-6 -left-6 max-w-[240px] rounded-2xl border border-white/40 bg-card/80 p-6 shadow-2xl backdrop-blur-xl md:-left-12">
+              <div className="mb-2 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/10">
+                  <TrendingUp className="h-6 w-6 text-accent" />
+                </div>
+                <span className="font-display text-2xl font-bold text-foreground">+312%</span>
               </div>
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-muted shadow-sm">
-                <img
-                  src={clientCosmetics}
-                  alt="Product photography for a Patna beauty brand"
-                  width={800}
-                  height={1000}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
+              <p className="text-sm leading-tight text-muted-foreground">
+                Average campaign reach growth for our Patna retail partners.
+              </p>
+            </div>
+
+            {/* Floating Badge */}
+            <div className="absolute -right-4 top-12 hidden rounded-xl bg-foreground p-4 text-background shadow-lg sm:block">
+              <div className="flex items-center gap-2">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
+                <span className="text-xs font-medium tracking-wide">Live Campaign Tracking</span>
               </div>
             </div>
           </div>
