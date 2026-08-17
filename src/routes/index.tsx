@@ -218,7 +218,7 @@ function Index() {
             <div className="flex flex-col items-start gap-5 pt-2 sm:flex-row sm:items-center sm:gap-6">
               <Link
                 to="/services"
-                className="inline-flex w-full items-center justify-center rounded-full bg-accent px-8 py-4 text-lg font-semibold text-accent-foreground shadow-lg shadow-accent/20 transition-colors hover:bg-accent/90 sm:w-auto"
+                className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-lg font-semibold text-accent-foreground shadow-lg shadow-accent/20 transition-colors hover:bg-accent/90"
               >
                 View Services
               </Link>
