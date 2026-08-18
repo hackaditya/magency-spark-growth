@@ -24,6 +24,7 @@ import clientCafe from "../assets/client-cafe.jpg";
 import clientCosmetics from "../assets/client-cosmetics.jpg";
 import cakelooCake from "../assets/portfolio/cakeloo-4.jpg";
 import cakelooFloral from "../assets/portfolio/cakeloo-3.jpg";
+import founderPhoto from "../assets/aditya-gaurav-founder.png.asset.json";
 import { Instagram, TrendingUp, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/")({
