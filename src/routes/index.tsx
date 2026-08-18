@@ -13,6 +13,9 @@ import {
   Handshake,
   Wallet,
   FileBarChart,
+  Sparkles,
+  PenTool,
+  Camera,
 } from "lucide-react";
 
 import heroStudio from "../assets/hero-studio.jpg";
@@ -74,60 +77,76 @@ export const Route = createFileRoute("/")({
 
 const services = [
   {
-    icon: Megaphone,
-    title: "Influencer Marketing",
+    icon: Share2,
+    title: "Social Media Marketing",
     description:
-      "We build end-to-end influencer marketing campaigns with creators whose audience matches your buyer — from sourcing to content to ROI tracking.",
-    features: ["Creator Sourcing", "Campaign Management", "ROI Tracking"],
-    color: "bg-brand-light text-brand",
-  },
-  {
-    icon: Target,
-    title: "Meta Ads Management",
-    description:
-      "We run and optimize your Meta ads across Facebook, Instagram, and WhatsApp — set your budget and we'll turn your videos into scroll-stopping ads that drive real visibility.",
-    features: ["Budget-Based Ad Setup", "Creative & Copy", "Daily Optimization"],
-    color: "bg-sky-100 text-sky-600",
-  },
-  {
-    icon: Video,
-    title: "Video Production",
-    description:
-      "Short-form reels and long-form storytelling videos crafted for small and medium businesses — built to convert on social feeds and ad placements.",
-    features: ["Short-Form Reels", "Long-Form Videos", "Ad-Ready Edits"],
-    color: "bg-orange-100 text-orange-600",
-  },
-  {
-    icon: Search,
-    title: "SEO Strategy",
-    description:
-      "Rank higher on Google with targeted keywords, technical fixes, and content that answers what your customers are searching for.",
-    features: ["Keyword Research", "On-Page SEO", "Monthly Reporting"],
-    color: "bg-emerald-100 text-emerald-600",
+      "Full-cycle social media management across Instagram, Facebook, and WhatsApp — content, community, and consistent growth.",
+    features: ["Content Calendars", "Community Management", "Growth Strategy"],
+    color: "bg-rose-100 text-rose-600",
   },
   {
     icon: MapPin,
-    title: "GMB Optimization",
+    title: "Google Maps Optimization",
     description:
       "Rank #1 on Google Maps. We optimize your business profile so nearby customers find you before the competition.",
     features: ["Map Pack Optimization", "Review Strategy", "Local Posts"],
     color: "bg-amber-100 text-amber-600",
   },
   {
-    icon: Globe,
-    title: "Website Making",
+    icon: Megaphone,
+    title: "Influencer Marketing",
     description:
-      "We build high-converting websites that turn curious visitors into loyal paying customers.",
-    features: ["Responsive Design", "Conversion Audits", "Fast Hosting"],
+      "End-to-end influencer campaigns with creators whose audience matches your buyers — from sourcing to content to ROI tracking.",
+    features: ["Creator Sourcing", "Campaign Management", "ROI Tracking"],
+    color: "bg-brand-light text-brand",
+  },
+  {
+    icon: Camera,
+    title: "Photography & Videography",
+    description:
+      "Scroll-stopping product photography and reels built to convert — on social feeds and ad placements alike.",
+    features: ["Product Shoots", "Short-Form Reels", "Ad-Ready Edits"],
+    color: "bg-orange-100 text-orange-600",
+  },
+  {
+    icon: Target,
+    title: "Lead Generation & Advertising",
+    description:
+      "Budget-based Meta and Google ads that turn views into qualified leads and real sales for your business.",
+    features: ["Budget-Based Ad Setup", "Creative & Copy", "Daily Optimization"],
+    color: "bg-sky-100 text-sky-600",
+  },
+  {
+    icon: Sparkles,
+    title: "Branding",
+    description:
+      "Logos, identity, and positioning that make your business memorable and trusted in your market.",
+    features: ["Logo & Identity", "Brand Positioning", "Style Guides"],
     color: "bg-violet-100 text-violet-600",
   },
   {
-    icon: Share2,
-    title: "Social Media Handling",
+    icon: PenTool,
+    title: "Content Creation",
     description:
-      "Daily content, community management, and growth strategy across Instagram, Facebook, and more.",
-    features: ["Content Calendars", "Community Replies", "Paid Ads"],
-    color: "bg-rose-100 text-rose-600",
+      "Daily, platform-native content — captions, reels, and carousels — that keeps your brand top of mind.",
+    features: ["Captions & Copy", "Reels & Carousels", "Platform Tuning"],
+    color: "bg-emerald-100 text-emerald-600",
+  },
+  {
+    icon: Globe,
+    title: "Website Designing",
+    description:
+      "High-converting, fast websites that turn curious visitors into loyal paying customers.",
+    features: ["Responsive Design", "Conversion Audits", "Fast Hosting"],
+    color: "bg-indigo-100 text-indigo-600",
+  },
+  {
+    icon: Calendar,
+    title: "Event Coverage",
+    description:
+      "On-ground coverage of launches, pop-ups, and events, packaged into shareable content that extends your reach.",
+    features: ["Live Coverage", "Highlight Reels", "Social Amplification"],
+    color: "bg-fuchsia-100 text-fuchsia-600",
   },
 ];
 
@@ -198,12 +217,15 @@ function Index() {
             {/* Service Highlights — scannable */}
             <div className="flex flex-wrap gap-2">
               {[
+                "Social Media Marketing",
+                "Google Maps Optimization",
                 "Influencer Marketing",
-                "Meta Ads",
-                "Video Production",
-                "SEO & GMB",
-                "Website Design",
-                "Social Media",
+                "Photography & Videography",
+                "Lead Generation & Advertising",
+                "Branding",
+                "Content Creation",
+                "Website Designing",
+                "Event Coverage",
               ].map((label) => (
                 <span
                   key={label}
