@@ -23,6 +23,9 @@ export function Footer() {
             <Link to="/about" className="transition-colors hover:text-foreground">
               About
             </Link>
+            <Link to="/whatsapp" className="transition-colors hover:text-foreground">
+              WhatsApp
+            </Link>
             <Link to="/contact" className="transition-colors hover:text-foreground">
               Contact
             </Link>
