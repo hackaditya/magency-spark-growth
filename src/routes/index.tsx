@@ -337,6 +337,67 @@ function Index() {
         </div>
       </section>
 
+      {/* Who We Are */}
+      <section className="py-24">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-tight text-accent">
+            Who We Are
+          </p>
+          <h2 className="mb-8 font-display text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+            A startup team with a totally new outlook
+          </h2>
+          <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
+            <p>
+              We&rsquo;re a start-up team of millennials trying to hit the digital marketing industry
+              with a totally new outlook. This new outlook will boost your business and will help
+              you take that one step ahead towards making your business loved by people.
+            </p>
+            <p>
+              We at Magency offer you a road map for your business to become people&rsquo;s
+              obsession. We&rsquo;re here to make you the social gossip in the market.
+            </p>
+          </div>
+          <div className="mt-12 inline-flex flex-col items-center">
+            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-light font-display text-3xl font-extrabold text-brand">
+              AG
+            </div>
+            <div className="mt-4 font-display text-xl font-bold text-foreground">Aditya Gaurav</div>
+            <div className="text-sm font-semibold uppercase tracking-widest text-accent">
+              Founder
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Aim */}
+      <section className="bg-bg-light py-24">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-tight text-accent">
+            Our Aim
+          </p>
+          <h2 className="mb-8 font-display text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+            Best quality services at the lowest prices
+          </h2>
+          <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
+            <p>
+              We here at Magency offer you the best quality services in the lowest prices possible.
+              We&rsquo;re here to make our services accessible to all those small local businesses.
+              We&rsquo;re open to all kinds of businesses from small scale to large scale.
+            </p>
+            <p>
+              We want us to grow together and prosper in our businesses. So come join with us in
+              this journey.
+            </p>
+          </div>
+          <Link
+            to="/contact"
+            className="mt-10 inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-lg font-semibold text-accent-foreground shadow-lg shadow-accent/20 transition-colors hover:bg-accent/90"
+          >
+            Join the journey <ArrowRight className="h-5 w-5" />
+          </Link>
+        </div>
+      </section>
+
       {/* Social Media / Process Section */}
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-6">
