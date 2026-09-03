@@ -359,10 +359,17 @@ function Index() {
             </p>
           </div>
           <div className="mt-12 inline-flex flex-col items-center">
-            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-light font-display text-3xl font-extrabold text-brand">
-              AG
+            <div className="h-32 w-32 overflow-hidden rounded-full ring-4 ring-accent/10 shadow-lg sm:h-40 sm:w-40">
+              <img
+                src={founderPhoto.url}
+                alt="Aditya Gaurav, Founder of Magency.in"
+                width={320}
+                height={320}
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
             </div>
-            <div className="mt-4 font-display text-xl font-bold text-foreground">Aditya Gaurav</div>
+            <div className="mt-5 font-display text-2xl font-bold text-foreground">Aditya Gaurav</div>
             <div className="text-sm font-semibold uppercase tracking-widest text-accent">
               Founder
             </div>
