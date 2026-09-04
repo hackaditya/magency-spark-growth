@@ -45,9 +45,9 @@ export const Route = createFileRoute("/")({
         content:
           "Grow your Patna business with influencer marketing, Meta ads, video, SEO, GMB and social media handled end-to-end.",
       },
-      { property: "og:url", content: "https://magency-spark-growth.lovable.app/" },
+      { property: "og:url", content: "https://magency.in/" },
     ],
-    links: [{ rel: "canonical", href: "https://magency-spark-growth.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://magency.in/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/")({
           name: "Magency.in",
           description:
             "Digital marketing agency in Patna for small and medium businesses.",
-          url: "https://magency-spark-growth.lovable.app/",
+          url: "https://magency.in/",
           telephone: "+91-91999-90766",
           email: "teammagency19@gmail.com",
           address: {

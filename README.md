@@ -4,7 +4,7 @@ Make a website for a marketing agency whose name is Magency. in. I want to creat
 
 This project was built with [Lovable](https://lovable.dev).
 
-**Live app**: https://magency-spark-growth.lovable.app
+**Live app**: https://magency.in
 
 ## Build with Lovable
 

@@ -18,9 +18,9 @@ export const Route = createFileRoute("/services")({
         content:
           "Influencer marketing, Meta ads, video, SEO, GMB, websites and social media handling for small and medium businesses.",
       },
-      { property: "og:url", content: "https://magency-spark-growth.lovable.app/services" },
+      { property: "og:url", content: "https://magency.in/services" },
     ],
-    links: [{ rel: "canonical", href: "https://magency-spark-growth.lovable.app/services" }],
+    links: [{ rel: "canonical", href: "https://magency.in/services" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -47,7 +47,7 @@ export const Route = createFileRoute("/services")({
               provider: {
                 "@type": "LocalBusiness",
                 name: "Magency.in",
-                url: "https://magency-spark-growth.lovable.app/",
+                url: "https://magency.in/",
               },
             },
           })),

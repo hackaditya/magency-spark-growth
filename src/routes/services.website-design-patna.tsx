@@ -37,13 +37,13 @@ export const Route = createFileRoute("/services/website-design-patna")({
       {
         property: "og:url",
         content:
-          "https://magency-spark-growth.lovable.app/services/website-design-patna",
+          "https://magency.in/services/website-design-patna",
       },
     ],
     links: [
       {
         rel: "canonical",
-        href: "https://magency-spark-growth.lovable.app/services/website-design-patna",
+        href: "https://magency.in/services/website-design-patna",
       },
     ],
     scripts: [
@@ -57,11 +57,11 @@ export const Route = createFileRoute("/services/website-design-patna")({
           description:
             "Affordable, high-converting website design in Patna for small and medium businesses. Fast, mobile-ready, SEO-friendly.",
           areaServed: "Patna, Bihar",
-          url: "https://magency-spark-growth.lovable.app/services/website-design-patna",
+          url: "https://magency.in/services/website-design-patna",
           provider: {
             "@type": "LocalBusiness",
             name: "Magency.in",
-            url: "https://magency-spark-growth.lovable.app/",
+            url: "https://magency.in/",
             telephone: "+91-91999-90766",
             email: "teammagency19@gmail.com",
             address: {
