@@ -240,11 +240,12 @@ function Index() {
             {/* Primary + Secondary CTA */}
             <div className="flex flex-col items-start gap-5 pt-2 sm:flex-row sm:items-center sm:gap-6">
               <Link
-                to="/services"
+                to="/pricing"
                 className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-lg font-semibold text-accent-foreground shadow-lg shadow-accent/20 transition-colors hover:bg-accent/90"
               >
                 View Services
               </Link>
+
               <Link
                 to="/contact"
                 className="group inline-flex items-center gap-1 text-lg font-semibold text-accent transition-opacity hover:opacity-80"
