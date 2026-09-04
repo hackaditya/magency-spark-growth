@@ -4,7 +4,7 @@ import { Clock, MapPin, Phone, ShieldCheck, Store } from "lucide-react";
 
 const WHATSAPP_NUMBER = "919199990766";
 const DISPLAY_NUMBER = "+91 91999 90766";
-const PAGE_URL = "https://magency-spark-growth.lovable.app/whatsapp";
+const PAGE_URL = "https://magency.in/whatsapp";
 
 const TITLE = "WhatsApp Magency.in — Chat With Our Patna Team";
 const DESCRIPTION =

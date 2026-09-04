@@ -88,10 +88,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "Magency.in" },
       { property: "og:site_name", content: "Magency.in" },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://magency-spark-growth.lovable.app/og-image.jpg" },
+      { property: "og:image", content: "https://magency.in/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@MagencyIn" },
-      { name: "twitter:image", content: "https://magency-spark-growth.lovable.app/og-image.jpg" },
+      { name: "twitter:image", content: "https://magency.in/og-image.jpg" },
     ],
 
     links: [
