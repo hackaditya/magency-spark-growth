@@ -18,7 +18,7 @@ const packages = [
   },
   {
     name: "Growth",
-    price: "₹15,999",
+    price: "₹14,999",
     period: "/month",
     tagline: "Our most popular plan for shops, cafés and clinics scaling up.",
     featured: true,
@@ -33,7 +33,7 @@ const packages = [
   },
   {
     name: "Scale",
-    price: "₹29,999",
+    price: "₹24,999",
     period: "/month",
     tagline: "Full-service marketing for established multi-outlet brands.",
     features: [
