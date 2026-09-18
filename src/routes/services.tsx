@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Megaphone, Search, MapPin, Globe, Share2, CheckCircle2, Target, Video } from "lucide-react";
-import { ServiceInquiryForm } from "../components/ServiceInquiryForm";
+import { Megaphone, Search, MapPin, Globe, Share2, CheckCircle2, Target, Video, ArrowRight } from "lucide-react";
 
 
 export const Route = createFileRoute("/services")({
@@ -18,7 +17,9 @@ export const Route = createFileRoute("/services")({
         content:
           "Influencer marketing, Meta ads, video, SEO, GMB, websites and social media handling for small and medium businesses.",
       },
+      { property: "og:type", content: "website" },
       { property: "og:url", content: "https://magency.in/services" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://magency.in/services" }],
     scripts: [
@@ -163,8 +164,7 @@ function ServicesPage() {
             Services built for <span className="text-brand">small business growth</span>
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Everything you need to attract, engage, and convert local customers—without the agency
-            price tag.
+            Practical support to help your business become easier to find, earn more trust, and turn attention into inquiries and customers.
           </p>
         </div>
       </section>
@@ -193,8 +193,10 @@ function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-auto">
-                  <ServiceInquiryForm service={service.title} />
+                <div className="mt-auto pt-2">
+                  <Link to="/contact" className="inline-flex items-center gap-2 font-bold text-accent">
+                    Book a Free Audit <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </div>
               </div>
             ))}
@@ -203,11 +205,24 @@ function ServicesPage() {
         </div>
       </section>
 
+      <section className="border-y border-border bg-bg-light py-14">
+        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="text-sm font-bold uppercase text-accent">Simple monthly options</p>
+            <h2 className="mt-2 font-display text-3xl font-bold">Packages start at ₹7,999/month.</h2>
+            <p className="mt-2 text-muted-foreground">Compare deliverables, management fees and add-ons before you book.</p>
+          </div>
+          <Link to="/pricing" className="inline-flex w-fit items-center gap-2 rounded-full bg-accent px-7 py-3 font-bold text-accent-foreground">
+            View Pricing <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-foreground py-20 text-background">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="mb-6 font-display text-3xl font-bold tracking-tight md:text-4xl">
-            Not sure which service fits you?
+            Not sure what your business needs first?
           </h2>
           <p className="mb-10 text-background/70">
             Book a free 15-minute audit. We'll look at your current presence and recommend the right
