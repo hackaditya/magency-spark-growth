@@ -12,7 +12,6 @@ import {
   ShoppingCart,
   MapPin,
 } from "lucide-react";
-import { ServiceInquiryForm } from "../components/ServiceInquiryForm";
 import cakelooCake from "../assets/portfolio/cakeloo-4.jpg";
 import cakelooFloral from "../assets/portfolio/cakeloo-3.jpg";
 
@@ -334,33 +333,20 @@ function WebsiteDesignPatnaPage() {
 
       {/* Inquiry */}
       <section className="bg-bg-light py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
-            <div>
-              <h2 className="mb-4 font-display text-4xl font-bold tracking-tight text-foreground">
-                Ready for a website that actually grows your business?
-              </h2>
-              <p className="mb-8 text-lg text-muted-foreground">
-                Tell us about your business and what you want your website to do. We'll come back
-                with a plan and a quote that fits a Patna small-business budget — no jargon, no
-                pressure.
-              </p>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-brand" /> Free, no-obligation quote
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-brand" /> Launch in as little as 5 days
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-brand" /> Local SEO built in from day one
-                </li>
-              </ul>
-            </div>
-            <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
-              <ServiceInquiryForm service="Website Design in Patna" />
-            </div>
-          </div>
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <h2 className="mb-4 font-display text-4xl font-bold tracking-tight text-foreground">
+            Ready for a website that supports real business growth?
+          </h2>
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground">
+            Start with a free audit. We will review your current presence, discuss what the website
+            needs to achieve, and recommend a clear scope before you commit.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 font-bold text-accent-foreground transition-transform hover:scale-105"
+          >
+            Book a Free Audit <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </section>
 
