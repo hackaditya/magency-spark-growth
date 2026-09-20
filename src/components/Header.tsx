@@ -8,8 +8,6 @@ const navLinks = [
   { to: "/pricing", label: "Pricing" },
   { to: "/portfolio", label: "Work" },
   { to: "/about", label: "About" },
-
-  { to: "/whatsapp", label: "WhatsApp" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -46,7 +44,7 @@ export function Header() {
             to="/contact"
             className="rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-brand-dark hover:shadow-lg"
           >
-            Start Growing
+            Book a Free Audit
           </Link>
         </div>
 
@@ -83,7 +81,7 @@ export function Header() {
               onClick={() => setMobileOpen(false)}
               className="rounded-full bg-brand px-6 py-2.5 text-center text-sm font-semibold text-primary-foreground transition-all hover:bg-brand-dark"
             >
-              Start Growing
+              Book a Free Audit
             </Link>
           </nav>
         </div>

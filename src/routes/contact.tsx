@@ -19,7 +19,9 @@ export const Route = createFileRoute("/contact")({
         content:
           "Get in touch with Magency.in. Book a free marketing audit for your small business in Patna.",
       },
+      { property: "og:type", content: "website" },
       { property: "og:url", content: "https://magency.in/contact" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://magency.in/contact" }],
   }),
@@ -79,8 +81,8 @@ function ContactPage() {
             Let's put your business on the map.
           </h1>
           <p className="text-lg text-muted-foreground">
-            Book a free 15-minute audit. We'll review your current marketing and show you exactly
-            where you can win more customers.
+            Book a free audit. We'll review your current presence, discuss your goals, and show you
+            the clearest opportunities and next steps.
           </p>
         </div>
       </section>
@@ -90,7 +92,10 @@ function ContactPage() {
           <div className="grid gap-12 lg:grid-cols-2">
             {/* Contact Form */}
             <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
-              <h2 className="mb-6 font-display text-2xl font-bold">Send us a message</h2>
+              <h2 className="mb-2 font-display text-2xl font-bold">Book a Free Audit</h2>
+              <p className="mb-6 text-muted-foreground">
+                Tell us about your business. We will review it before continuing the conversation on WhatsApp.
+              </p>
               <form className="space-y-5" onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="name" className="mb-2 block text-sm font-bold text-foreground">
@@ -165,6 +170,14 @@ function ContactPage() {
 
             {/* Contact Info */}
             <div className="space-y-8">
+              <div className="border-b border-border pb-8">
+                <p className="text-sm font-bold uppercase text-accent">What happens next</p>
+                <ol className="mt-5 space-y-4 text-muted-foreground">
+                  <li><strong className="text-foreground">1. Review:</strong> We check your current digital presence.</li>
+                  <li><strong className="text-foreground">2. Discussion:</strong> We clarify your goals, audience and priorities.</li>
+                  <li><strong className="text-foreground">3. Recommendation:</strong> We share practical next steps and a suitable scope.</li>
+                </ol>
+              </div>
               <div>
                 <h2 className="mb-4 font-display text-2xl font-bold">Contact details</h2>
                 <p className="font-bold text-muted-foreground">
@@ -192,15 +205,6 @@ function ContactPage() {
                 ))}
               </div>
 
-              <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-xl bg-foreground px-6 py-4 text-sm font-bold text-background transition-colors hover:bg-foreground/90"
-              >
-                <MessageCircle className="h-5 w-5" />
-                Chat with us on WhatsApp
-              </a>
             </div>
           </div>
         </div>

@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
-  BarChart3,
   CheckCircle2,
   FileSearch,
   Globe,

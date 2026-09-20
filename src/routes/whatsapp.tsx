@@ -128,8 +128,7 @@ function WhatsAppPage() {
               href={waLink("Hi Magency.in! I'd like a free marketing audit for my business.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full px-8 py-4 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105"
-              style={{ backgroundColor: "#25D366" }}
+              className="rounded-full bg-whatsapp px-8 py-4 text-sm font-bold text-whatsapp-foreground shadow-lg transition-transform hover:scale-105"
             >
               Open WhatsApp chat
             </a>
@@ -224,8 +223,7 @@ function WhatsAppPage() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full rounded-lg px-8 py-4 text-sm font-bold text-white transition-opacity hover:opacity-90"
-                  style={{ backgroundColor: "#25D366" }}
+                  className="w-full rounded-lg bg-whatsapp px-8 py-4 text-sm font-bold text-whatsapp-foreground transition-opacity hover:opacity-90"
                 >
                   Send on WhatsApp
                 </button>
