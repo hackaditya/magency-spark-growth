@@ -14,7 +14,92 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      lead_notes: {
+        Row: {
+          author_id: string | null
+          author_name: string | null
+          body: string
+          created_at: string
+          id: string
+          lead_id: string
+          updated_at: string
+        }
+        Insert: {
+          author_id?: string | null
+          author_name?: string | null
+          body: string
+          created_at?: string
+          id?: string
+          lead_id: string
+          updated_at?: string
+        }
+        Update: {
+          author_id?: string | null
+          author_name?: string | null
+          body?: string
+          created_at?: string
+          id?: string
+          lead_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lead_notes_lead_id_fkey"
+            columns: ["lead_id"]
+            isOneToOne: false
+            referencedRelation: "leads"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      leads: {
+        Row: {
+          business_name: string | null
+          city: string | null
+          created_at: string
+          email: string | null
+          goals: string | null
+          id: string
+          name: string
+          owner_name: string | null
+          phone: string | null
+          service: string | null
+          source: string
+          stage: string
+          updated_at: string
+        }
+        Insert: {
+          business_name?: string | null
+          city?: string | null
+          created_at?: string
+          email?: string | null
+          goals?: string | null
+          id?: string
+          name: string
+          owner_name?: string | null
+          phone?: string | null
+          service?: string | null
+          source?: string
+          stage?: string
+          updated_at?: string
+        }
+        Update: {
+          business_name?: string | null
+          city?: string | null
+          created_at?: string
+          email?: string | null
+          goals?: string | null
+          id?: string
+          name?: string
+          owner_name?: string | null
+          phone?: string | null
+          service?: string | null
+          source?: string
+          stage?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
