@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MessageCircle } from "lucide-react";
+import { saveLead } from "@/lib/leads";
 
 const WHATSAPP_NUMBER = "919199990766";
 
@@ -43,6 +44,14 @@ export function BookingForm({
       return;
     }
     setError(null);
+    void saveLead({
+      name: n,
+      business_name: b,
+      phone: p,
+      service: pkg,
+      goals: [g, date ? `Preferred call date: ${date}` : ""].filter(Boolean).join(" — ") || null,
+      source: "Pricing booking form",
+    });
     const text =
       `Hi Magency.in! I'd like to book the ${pkg} package.\n\n` +
       `Name: ${n}\n` +
