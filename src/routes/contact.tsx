@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
+import { saveLead } from "@/lib/leads";
 
 const WHATSAPP_NUMBER = "919199990766";
 
@@ -63,6 +64,13 @@ function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    void saveLead({
+      name: name.trim() || "Website visitor",
+      email: email.trim() || null,
+      service,
+      goals: message.trim() || null,
+      source: "Free audit form",
+    });
     const text =
       `Hi Magency.in! I'd like to book a free audit.\n\n` +
       `Name: ${name || "—"}\n` +
