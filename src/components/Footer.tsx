@@ -60,7 +60,10 @@ export function Footer() {
             </a>
           </div>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Magency.in — Patna, Bihar
+            © {new Date().getFullYear()} Magency.in — Patna, Bihar ·{" "}
+            <Link to="/auth" className="transition-colors hover:text-foreground">
+              Team login
+            </Link>
           </p>
         </div>
       </div>
