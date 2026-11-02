@@ -87,6 +87,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Magency.in helps Patna small businesses grow with influencer marketing, Meta ads, video, SEO, GMB and social media.",
       },
       { name: "author", content: "Magency.in" },
+      { name: "google-site-verification", content: "QB25VqFFHO_TYIs_eUwg-NSzxbfw8I7yl1QJA9g_UJY" },
       { property: "og:site_name", content: "Magency.in" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://magency.in/og-image.jpg" },
@@ -96,6 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
 
     links: [
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
