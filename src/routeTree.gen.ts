@@ -20,6 +20,7 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as WhatsappRouteImport } from './routes/whatsapp'
 import { Route as AuthenticatedLeadsRouteImport } from './routes/_authenticated/leads'
+import { Route as ServicesSeoPatnaRouteImport } from './routes/services.seo-patna'
 import { Route as ServicesWebsiteDesignPatnaRouteImport } from './routes/services.website-design-patna'
 
 const IndexRoute = IndexRouteImport.update({
@@ -76,6 +77,11 @@ const AuthenticatedLeadsRoute = AuthenticatedLeadsRouteImport.update({
   path: '/leads',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const ServicesSeoPatnaRoute = ServicesSeoPatnaRouteImport.update({
+  id: '/seo-patna',
+  path: '/seo-patna',
+  getParentRoute: () => ServicesRoute,
+} as any)
 const ServicesWebsiteDesignPatnaRoute =
   ServicesWebsiteDesignPatnaRouteImport.update({
     id: '/website-design-patna',
@@ -94,6 +100,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/whatsapp': typeof WhatsappRoute
   '/leads': typeof AuthenticatedLeadsRoute
+  '/services/seo-patna': typeof ServicesSeoPatnaRoute
   '/services/website-design-patna': typeof ServicesWebsiteDesignPatnaRoute
 }
 export interface FileRoutesByTo {
@@ -107,6 +114,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/whatsapp': typeof WhatsappRoute
   '/leads': typeof AuthenticatedLeadsRoute
+  '/services/seo-patna': typeof ServicesSeoPatnaRoute
   '/services/website-design-patna': typeof ServicesWebsiteDesignPatnaRoute
 }
 export interface FileRoutesById {
@@ -122,6 +130,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/whatsapp': typeof WhatsappRoute
   '/_authenticated/leads': typeof AuthenticatedLeadsRoute
+  '/services/seo-patna': typeof ServicesSeoPatnaRoute
   '/services/website-design-patna': typeof ServicesWebsiteDesignPatnaRoute
 }
 export interface FileRouteTypes {
@@ -137,6 +146,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/whatsapp'
     | '/leads'
+    | '/services/seo-patna'
     | '/services/website-design-patna'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -150,6 +160,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/whatsapp'
     | '/leads'
+    | '/services/seo-patna'
     | '/services/website-design-patna'
   id:
     | '__root__'
@@ -164,6 +175,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/whatsapp'
     | '/_authenticated/leads'
+    | '/services/seo-patna'
     | '/services/website-design-patna'
   fileRoutesById: FileRoutesById
 }
@@ -259,6 +271,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedLeadsRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/services/seo-patna': {
+      id: '/services/seo-patna'
+      path: '/seo-patna'
+      fullPath: '/services/seo-patna'
+      preLoaderRoute: typeof ServicesSeoPatnaRouteImport
+      parentRoute: typeof ServicesRoute
+    }
     '/services/website-design-patna': {
       id: '/services/website-design-patna'
       path: '/website-design-patna'
@@ -281,10 +300,12 @@ const AuthenticatedRouteRouteWithChildren =
   AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
 
 interface ServicesRouteChildren {
+  ServicesSeoPatnaRoute: typeof ServicesSeoPatnaRoute
   ServicesWebsiteDesignPatnaRoute: typeof ServicesWebsiteDesignPatnaRoute
 }
 
 const ServicesRouteChildren: ServicesRouteChildren = {
+  ServicesSeoPatnaRoute: ServicesSeoPatnaRoute,
   ServicesWebsiteDesignPatnaRoute: ServicesWebsiteDesignPatnaRoute,
 }
 
